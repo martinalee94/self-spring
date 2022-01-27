@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="first.selfspring.dao.HousesDAO">
+    <select id="getAllHouses"
+            resultType="first.selfspring.domain.House">
+        SELECT * FROM house.house_table
+    </select>
+    <select id="getHouse" parameterType="int"
+            resultType="first.selfspring.domain.House">
+        SELECT * FROM house.house_table WHERE id = #{id}
+    </select>
+    <insert id="postHouse" parameterType="first.selfspring.domain.House"
+    useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO house.house_table(owner, address, type, price) VALUES (#{owner}, #{address}, #{type}, #{price})
+    </insert>
+</mapper>
