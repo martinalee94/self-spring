@@ -29,5 +29,11 @@ public class HouseController {
         return houseService.getHouse(id);
     }
 
+    @PutMapping("/houses/{id}")
+    public House updateHouse(@PathVariable Integer id, @RequestBody House house){
+        return houseService.updateHouse(id, house);
+    }
+
+
 
 }

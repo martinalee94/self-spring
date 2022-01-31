@@ -10,4 +10,5 @@ public interface HouseService {
     List<House> getAllHouses();
     House getHouse(Integer id);
     void postHouse(House house);
+    House updateHouse(Integer id, House house);
 }

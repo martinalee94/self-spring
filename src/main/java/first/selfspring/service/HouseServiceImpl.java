@@ -26,4 +26,19 @@ public class HouseServiceImpl implements HouseService{
     public void postHouse(House house) {
         dao.postHouse(house);
     }
+
+    @Override
+    public House updateHouse(Integer id, House house) {
+        House updateHouse = new House();
+        int result = dao.updateHouse(id, house);
+        if ( result == 1 ){
+            updateHouse.setId(id);
+            updateHouse.setOwner(house.getOwner());
+            updateHouse.setType(house.getType());
+            updateHouse.setAddress(house.getAddress());
+            updateHouse.setPrice(house.getPrice());
+        }
+        return updateHouse;
+    }
+
 }
