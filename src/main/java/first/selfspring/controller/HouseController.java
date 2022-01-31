@@ -2,6 +2,7 @@ package first.selfspring.controller;
 
 import first.selfspring.domain.House;
 import first.selfspring.service.HouseService;
+import org.apache.ibatis.annotations.Delete;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -34,6 +35,8 @@ public class HouseController {
         return houseService.updateHouse(id, house);
     }
 
-
-
+    @DeleteMapping("/houses/{id}")
+    public Integer deleteHouse(@PathVariable Integer id){
+        return houseService.deleteHouse(id);
+    }
 }

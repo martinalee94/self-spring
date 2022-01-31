@@ -15,4 +15,7 @@
     <update id="updateHouse">
         UPDATE house.house_table SET owner= #{house.owner}, address = #{house.address}, type = #{house.type}, price = #{house.price} WHERE id=#{id}
     </update>
+    <delete id="deleteHouse">
+        DELETE FROM house.house_table WHERE id=#{id}
+    </delete>
 </mapper>

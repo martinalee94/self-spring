@@ -12,4 +12,5 @@ public interface HousesDAO {
     House getHouse(Integer id);
     void postHouse(House house);
     Integer updateHouse(@Param("id") Integer id, @Param("house") House house );
+    Integer deleteHouse(Integer id);
 }

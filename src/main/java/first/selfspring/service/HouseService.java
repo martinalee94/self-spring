@@ -11,4 +11,5 @@ public interface HouseService {
     House getHouse(Integer id);
     void postHouse(House house);
     House updateHouse(Integer id, House house);
+    Integer deleteHouse(Integer id);
 }

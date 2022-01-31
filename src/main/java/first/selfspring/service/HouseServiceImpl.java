@@ -41,4 +41,9 @@ public class HouseServiceImpl implements HouseService{
         return updateHouse;
     }
 
+    @Override
+    public Integer deleteHouse(Integer id) {
+        return dao.deleteHouse(id);
+    }
+
 }
